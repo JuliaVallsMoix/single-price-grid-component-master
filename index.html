@@ -4,47 +4,68 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
+  <script src="https://cdn.tailwindcss.com"></script>
+
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Single Price Grid Component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cyan: 'hsl(179, 62%, 43%)',
+            yellow: 'hsl(71, 73%, 54%)',
+            clearcyan: 'hsl(179, 62%, 63%)',
+            lightgray: 'hsl(204, 43%, 93%)',
+            grayishblue: 'hsl(218, 22%, 67%)',
+            transparentwhite: 'hsl(0, 100%, 100%, 0.8)',
+            moretransparentwhite: 'hsl(0, 100%, 100%, 0.5)'
+          }
+        }
+      }
+    }
+  </script>
+ 
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
 </head>
-<body>
-  Join our community
-
-  30-day, hassle-free money back guarantee
-
-  Gain access to our full library of tutorials along with expert code reviews. 
-  Perfect for any developers who are serious about honing their skills.
-
-  Monthly Subscription
-
-  &dollar;29 per month
-
-  Full access for less than &dollar;1 a day
-
-  Sign Up
-
-  Why Us
-
-  Tutorials by industry experts
-  Peer &amp; expert code review
-  Coding exercises
-  Access to our GitHub repos
-  Community forum
-  Flashcard decks
-  New videos every week
+<body class="bg-lightgray text-base font-['karla'] flex justify-center items-center h-screen">
+  <div class="max-w-xs">
+    <div class="p-6 bg-white space-y-4 rounded-t-md">
+      <h1 class="text-cyan font-bold">Join our community</h1>
+      <h2 class="text-yellow font-bold">30-day, hassle-free money back guarantee</h2>
+      <p class="text-grayishblue">
+        Gain access to our full library of tutorials along with expert code reviews.
+        Perfect for any developers who are serious about honing their skills.
+      </p>
+    </div>
+    <div class="p-6 bg-cyan text-white space-y-3">
+      <h2 class="font-bold">Monthly Subscription</h2>
+      <div class="flex gap-3 items-center">
+        <div class="font-bold text-3xl">&dollar;29</div> <div class="text-moretransparentwhite">per month</div>
+      </div>
+      <div class="space-y-6">
+        <div class="text-transparentwhite">Full access for less than &dollar;1 a day</div>
+        <button class="bg-yellow py-2 px-24 rounded drop-shadow-lg">Sign Up</button>
+      </div>
+    </div>
+    <div class="p-5 bg-clearcyan text-white space-y-4 rounded-b-md">
+      <h2 class="font-bold">Why Us</h2>
+      <ul class="text-transparentwhite">
+        <li>Tutorials by industry experts</li>
+        <li>Peer &amp; expert code review</li>
+        <li>Coding exercises</li>
+        <li>Access to our GitHub repos</li>
+        <li>Community forum</li>
+        <li>Flashcard decks</li>
+        <li>New videos every week</li>
+      </ul>
+    </div>
+  </div>
   
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
 </body>
 </html>
